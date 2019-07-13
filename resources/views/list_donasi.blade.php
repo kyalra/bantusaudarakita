@@ -44,18 +44,17 @@
                         <td>
                             {{$get->keterangan}}
                         </td>
-                        <td>
-                            Oud-Turnhout
+                        <td class="text-primary">
+                            Rp{{$get->jumlah_terkumpul}}
                         </td>
                         <td class="text-primary">
                             RP{{$get->jumlah}}
                         </td>
                         <td>
-                            <form action="{{ route('delete.donasi', $get->id)}}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-danger btn-sm inline" type="submit">Delete</button>
-                            </form>
+
+
+                            <a href="{{route('deletedonasi',['id'=>$get->id])}}" class="btn btn-danger btn-sm inline">Delete</a>
+
                         </td>
                     </tr>
                     @endforeach

@@ -19,10 +19,11 @@ Route::get('/list_donasi',function(){
     return view('list_donasi');
 });
 Route::get('/donasihomepage','BuatDonasiController@getdonasi');
-Route::get('/donasi','DonaturController@getdonatur');
+Route::post('/donasi/{id}','DonaturController@donatur');
+Route::get('/donasi/','DonaturController@getdonatur');
 Route::get('/list_donasi','ListDonasiController@getdaftardonasi');
 Route::get('/donasi/cofirmasi/{id}','DonaturController@confimasi');
-Route::delete('/hapusdonasi/{id}', 'ListDonasiController@destroy')->name('delete.donasi');
+Route::get('/hapusdonasi{id}', 'ListDonasiController@delete')->name('deletedonasi');
 
 Route::post('/modaldonasi','BuatDonasiController@buat_donasi');
 Route::post('/modaldonatur','DonaturController@donatur');

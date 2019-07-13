@@ -13,11 +13,12 @@ class ListDonasiController extends Controller
         return view('list_donasi',compact('buat_donasi'));
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
-        $List_donasi = list_donasi::find($id);
-        $List_donasi->delete();
+        $del=DB::table('buat_donasi')->where('id',$id);
+        $del->delete();
 
-        return redirect('/list_donasi')->with('success', 'Galangan dana deleted!');
+        return redirect()->back();
     }
+    
 }

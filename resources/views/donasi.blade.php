@@ -46,7 +46,6 @@
                             {{$no}}
                         </td>
                         <td>
-                            {{$get->judul}}
                         </td>
                         <td>
                             {{$get->nama}}
@@ -64,7 +63,7 @@
                         {{$get->buktitf}}
                         </td>
                         <td>
-                          @if($get->konfirmasi == true)
+                          @if($get->konfirmasi == 0)
                             <a href="/donasi/cofirmasi/{{$get->id}}">KOnfirmasi</a>
                             @else
                         </td>

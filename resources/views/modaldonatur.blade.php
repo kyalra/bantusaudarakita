@@ -1,4 +1,4 @@
-<div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="opacity: 0.8;">
+<div class="modal fade example" id="example" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="opacity: 0.8;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,8 +8,12 @@
         </button>
       </div>
       <div class="modal-body">
-      <form action="{{url('modaldonatur')}}" method="POST">
+      <form class="modal_donatur" action="{{url('modaldonatur')}}" method="POST">
         @csrf
+              <div class="form-group">
+                
+                <input type="hidden" class="form-control" name="id" id="exampleInputEmail1" value="id_buat_donasi">
+              </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Nama</label>
                 <input type="text" class="form-control" name="nama" id="exampleInputEmail1" placeholder="Masukan Nama">

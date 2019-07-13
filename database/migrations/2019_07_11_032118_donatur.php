@@ -15,7 +15,7 @@ class Donatur extends Migration
     {
         Schema::create('donatur', function (Blueprint $table) {
             $table->increments('id');
-            
+            $table->integer('id_buat_donasi');
             $table->string('nama',100);
             $table->string('email', 100)->unique();
             $table->string('komentar');

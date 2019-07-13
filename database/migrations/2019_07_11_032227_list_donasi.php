@@ -16,8 +16,9 @@ class ListDonasi extends Migration
         Schema::create('list_donasi', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_buat_donasi');
+            $table->integer('id_donatur');
             $table->integer('donasi_terkumpul');
-            $table->timestamp('created_at')->nullable();
+            
         });
     }
 

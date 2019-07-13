@@ -7,30 +7,44 @@ use Illuminate\Http\Request;
 
 class DonaturController extends Controller
 {
-    public function donatur(Request $request)
+    public function donatur($id,Request $request)
     {
-       DB::table('donatur')->insert([
+       $donatur = DB::table('donatur')->insertGetId([
            'nama'=>$request->nama,
            'email'=>$request->email,
            'komentar'=>$request->komen,
            'jumlah_donasi'=>$request->jumlah_donasi,
-           'buktitf'=>$request->bukti_tf
+           'buktitf'=>$request->bukti_tf,
+           'id_buat_donasi' => $id
        ]);
+       DB::table('list_donasi')->insert([
+        'id_buat_donasi' => $id,
+        'id_donatur' => $donatur,
+        'donasi_terkumpul' => $request->jumlah_donasi
+       ]);
+       $user = DB::table('list_donasi')->where('id_buat_donasi',$id)->sum('donasi_terkumpul');
+        DB::table('buat_donasi')->where('id',$id)->update([
+            'jumlah_terkumpul' => $user
+        ]);
        return redirect()->back();
     }
 
     public function getdonatur()
     {
         $donatur = DB::table('donatur')
-        ->join('buat_donasi','donatur.id','=','buat_donasi.id')
         ->get();
         // dd($donatur);
         return view('donasi',compact('donatur'));
     }
     public function confimasi($id)
     {
-       DB::table('donatur')->where('id',$id)->update([
+     DB::table('donatur')->where('id',$id)->update([
             'konfirmasi' => true
+       ]);
+       $user = DB::table('donatur')->where('id',$id)->first();
+       $buat_donasi = DB::table('donatur')->where('id_buat_donasi',$user->id_buat_donasi)->sum('jumlah_donasi');
+       $users = DB::table('buat_donasi')->where('id',$user->id_buat_donasi)->update([
+           'jumlah_terkumpul' => $buat_donasi
        ]);
        return redirect()->back();
     }

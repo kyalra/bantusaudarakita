@@ -88,12 +88,12 @@
                     </div>
                     <div class="card_inner_body">
                         <div class="card-body-top">
-                            <span>Raised: $7,689</span> / {{$get->jumlah}}
+                            <span>Terkumpul: Rp.{{$get->jumlah_terkumpul}}</span> /Rp.{{$get->jumlah}}
                         </div>
                         <h4 class="card-title">{{$get->judul}}</h4>
                         <p class="card-text">{{$get->keterangan}}
                         </p>
-                        <button data-toggle="modal" data-target="#example" href="#" class="main_btn2 mr-10">donate
+                        <button value="{{$get->id}}" type="button" class="main_btn2 mr-10 buat_donasi">donate
                             here</button>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                 <h1>Ayo Bantu Saudara KITA!</h1>
                 <p>Silakan Login terlebih dahuli jika ingin Membuat Galangan Dana.Ayo Kita Bantu Saudara Kita Semua!</p>
                 @if(Auth::check())
-                <button data-toggle="modal" data-target="#exampleModal" href="#" class="main_btn2 mr-10">Buat Donasi Disini
+                <button href="#" class="main_btn2 mr-10 bikin_donasi">Buat Donasi Disini
                     </button>
                 @else
 
@@ -125,6 +125,19 @@
     </div>
 </section>
 <!--================ End Experience Area =================-->
-@endsection
+
 @include('modaldonasi')
 @include('modaldonatur')
+<script>
+$(document).ready(function(){
+    $(document).on('click','.buat_donasi',function(){
+        var i = $(this).attr("value");
+        $('.modal_donatur').attr("action",'/donasi/'+i);
+        $('.example').modal();
+    });
+    $(document).on('click','.bikin_donasi',function(){
+        $('.exampleModal').modal();
+    })
+});
+</script>
+@endsection
