@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class DonaturController extends Controller
 {
+    public function FunctionName(Type $var = null)
+    {
+        $this->middleware('auth');
+    }
     public function donatur($id,Request $request)
     {
        $donatur = DB::table('donatur')->insertGetId([

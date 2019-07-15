@@ -1,6 +1,8 @@
 @extends('layouts.layouthomepage')
 @section('contenthomepage')
 
+
+
 <!--================ Home Banner Area =================-->
 <section class="home_banner_area">
     <div class="overlay"></div>

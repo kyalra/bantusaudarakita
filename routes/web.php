@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/login2',function(){
+    return view('auth.login2');
 });
- 
 Route::get('/list_donasi',function(){
     return view('list_donasi');
 });
-Route::get('/donasihomepage','BuatDonasiController@getdonasi');
+Route::get('/','BuatDonasiController@getdonasi');
 Route::post('/donasi/{id}','DonaturController@donatur');
 Route::get('/donasi/','DonaturController@getdonatur');
 Route::get('/list_donasi','ListDonasiController@getdaftardonasi');
@@ -31,3 +31,10 @@ Route::post('/modaldonatur','DonaturController@donatur');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'donasi',  'middleware'=>['auth']], function(){
+    Route::post('/donasi/{id}','DonaturController@donatur');
+    Route::get('/','DonaturController@getdonatur');
+    Route::get('/list_donasi','ListDonasiController@getdaftardonasi');
+    Route::get('/donasi/cofirmasi/{id}','DonaturController@confimasi');
+    Route::get('/hapusdonasi{id}', 'ListDonasiController@delete')->name('deletedonasi');
+});
