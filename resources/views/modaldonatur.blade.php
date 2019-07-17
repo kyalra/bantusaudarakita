@@ -30,6 +30,11 @@
                 <label for="exampleInputEmail1">Jumlah Donasi</label>
                 <input type="number" class="form-control" name="jumlah_donasi" id="exampleInputEmail1" placeholder="Masukan Jumlah Donasi">
               </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Silakan Donasi Ke Rekening di bawah ini</label>
+                <label >0123453212 -BCA- a/n Rizky Aldi Saputra</label> 
+               
+              </div>
               
               <div class="form-group">
                 <label for="exampleInputFile">Masukan Bukti Transfer</label>

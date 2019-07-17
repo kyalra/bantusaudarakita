@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
-
+use Alert;
 class ListDonasiController extends Controller
 {
     public function getdaftardonasi()
     {
         $buat_donasi = DB::table('buat_donasi')->get();
-        // dd($buat_donasi);
+       
+
         return view('list_donasi',compact('buat_donasi'));
     }
 
@@ -17,7 +18,7 @@ class ListDonasiController extends Controller
     {
         $del=DB::table('buat_donasi')->where('id',$id);
         $del->delete();
-
+        Alert::success('ANAK KONTOL', 'Judul Pesan');
         return redirect()->back();
     }
     

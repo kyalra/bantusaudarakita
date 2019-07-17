@@ -3,7 +3,7 @@
           <nav class="float-left">
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
+                <a href="/donasi>
                   Kyalra Team
                 </a>
               </li>
@@ -62,6 +62,8 @@
             <img src="{{asset('assets/img/sidebar-4.jpg')}}" alt="">
           </a>
         </li>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @include('sweet::alert')
 </body>
 
 </html>

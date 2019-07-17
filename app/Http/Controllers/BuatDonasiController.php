@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Alert;
 use DB;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,9 @@ class BuatDonasiController extends Controller
 {
     public function buat_donasi(Request $request)
     {
+        // $request->validate([
+        //     'norek' => 'required|unique:buat_donasi|min:10',
+        // ]);
         $auth = Auth::id();
         $gambar = $request->file('gambar')->getClientOriginalName();
 
@@ -30,6 +34,7 @@ class BuatDonasiController extends Controller
     {
         $buat_donasi = DB::table('buat_donasi')->get();
         // dd($buat_donasi);
+
         return view('donasihomepage',compact('buat_donasi'));
     }
 

@@ -134,7 +134,7 @@
 $(document).ready(function(){
     $(document).on('click','.buat_donasi',function(){
         var i = $(this).attr("value");
-        $('.modal_donatur').attr("action",'/donasi/'+i);
+        $('.modal_donatur').attr("action",'/modaldonatur/'+i);
         $('.example').modal();
     });
     $(document).on('click','.bikin_donasi',function(){

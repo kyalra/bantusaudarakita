@@ -219,3 +219,17 @@
 
     });
   </script>
+  
+  <script>
+     
+     $(document).ready(function(){
+    $(".preloader").hide();
+    loader.prependTo(window);
+});
+
+$(window).load(function(){
+    loader.remove();
+	$(".preloader").show();
+});
+    </script>
+     

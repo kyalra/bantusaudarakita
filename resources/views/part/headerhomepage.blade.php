@@ -4,8 +4,8 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="index.html">
-                    <img src="img/logo.png" alt="">
+                <a class="navbar-brand logo_h" href="/">
+                    <img src="img/logo.png"  alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -20,7 +20,7 @@
                         <div class="col-lg-12 pr-0">
                             <ul class="nav navbar-nav center_nav pull-right">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="donasihomepage">home</a>
+                                    <a class="nav-link" href="/">home</a>
                                 </li>
                                 <!-- <li class="nav-item ">
 										<a class="nav-link" href="causes.html">causes</a>
@@ -70,7 +70,7 @@
                                 </li>
                                 @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ url('logreg') }}">{{ __('Login') }}</a>
                                 </li>
                                 @endif
 

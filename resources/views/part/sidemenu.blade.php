@@ -16,18 +16,20 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="donasi">
+            <a class="nav-link" href="/donasi">
               <i class="material-icons">dashboard</i>
               <p>Konfirmasi Transfer</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="list_donasi">
+            <a class="nav-link" href="/donasi/list_donasi">
               <i class="material-icons">dashboard</i>
               <p>Daftar Donasi</p>
             </a>
           </li>
+         
           <!-- your sidebar here -->
         </ul>
       </div>
     </div>
+    

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Alert;
 use DB;
 use Illuminate\Http\Request;
 
@@ -13,6 +13,9 @@ class DonaturController extends Controller
     }
     public function donatur($id,Request $request)
     {
+        $request->validate([
+            'email' => 'required|unique:donatur|max:255',
+        ]);
        $donatur = DB::table('donatur')->insertGetId([
            'nama'=>$request->nama,
            'email'=>$request->email,
@@ -21,7 +24,7 @@ class DonaturController extends Controller
            'buktitf'=>$request->bukti_tf,
            'id_buat_donasi' => $id
        ]);
-       DB::table('list_donasi')->insert([
+           DB::table('list_donasi')->insert([
         'id_buat_donasi' => $id,
         'id_donatur' => $donatur,
         'donasi_terkumpul' => $request->jumlah_donasi
@@ -30,14 +33,20 @@ class DonaturController extends Controller
         DB::table('buat_donasi')->where('id',$id)->update([
             'jumlah_terkumpul' => $user
         ]);
+     
+        
        return redirect()->back();
     }
 
     public function getdonatur()
     {
+
         $donatur = DB::table('donatur')
         ->get();
         // dd($donatur);
+   
+       
+
         return view('donasi',compact('donatur'));
     }
     public function confimasi($id)
@@ -50,6 +59,7 @@ class DonaturController extends Controller
        $users = DB::table('buat_donasi')->where('id',$user->id_buat_donasi)->update([
            'jumlah_terkumpul' => $buat_donasi
        ]);
+       Alert::success('pesan yang ingin disampaikan', 'Judul Pesan');
        return redirect()->back();
     }
 }

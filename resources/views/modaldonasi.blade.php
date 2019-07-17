@@ -29,7 +29,7 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nomor Rekening</label>
                         <input type="number" class="form-control" name="norek" id="exampleInputEmail1"
-                            placeholder="Masukan Nomor Rekening">
+                            placeholder="Masukan Nomor Rekening minimal 10 angka">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputFile">Masukan Gambar</label>

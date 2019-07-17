@@ -64,7 +64,7 @@
                         </td>
                         <td>
                           @if($get->konfirmasi == 0)
-                            <a href="/donasi/cofirmasi/{{$get->id}}">KOnfirmasi</a>
+                            <a class="btn" href="/donasi/cofirmasi/{{$get->id}}">KOnfirmasi</a>
                             @else
                         </td>
                     </tr>

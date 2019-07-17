@@ -21,6 +21,9 @@
                         keterangan
                     </th>
                     <th>
+                        No Rekening
+                    </th>
+                    <th>
                         Donasi Tercapai
                     </th>
                     <th>
@@ -43,6 +46,9 @@
                         </td>
                         <td>
                             {{$get->keterangan}}
+                        </td>
+                        <td>
+                            {{$get->norek}}
                         </td>
                         <td class="text-primary">
                             Rp{{$get->jumlah_terkumpul}}
