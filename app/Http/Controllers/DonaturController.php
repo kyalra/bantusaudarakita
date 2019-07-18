@@ -24,6 +24,7 @@ class DonaturController extends Controller
            'buktitf'=>$request->bukti_tf,
            'id_buat_donasi' => $id
        ]);
+       Alert::success('ANAK KONTOL', 'Judul Pesan');
            DB::table('list_donasi')->insert([
         'id_buat_donasi' => $id,
         'id_donatur' => $donatur,

@@ -83,7 +83,7 @@
                 <div class="card">
                     <div class="card-body">
                         <figure>
-                            <img class="card-img-top img-fluid" src="/img/donasi/{{ $get->gambar }}"
+                            <img style="width:500px;height:250px;" class="card-img-top img-fluid" src="/img/donasi/{{ $get->gambar }}"
                                 alt="Card image cap">
                         </figure>
 

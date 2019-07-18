@@ -323,6 +323,10 @@ a {
 .home_banner_area {
   background: url(../img/banner/home.jpg) no-repeat center bottom;
   position: relative;
+  background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
   z-index: 1;
   height: 900px; }
   @media (max-width: 992px) {
