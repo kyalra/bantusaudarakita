@@ -20,7 +20,6 @@ class DonaturController extends Controller
            'nama'=>$request->nama,
            'email'=>$request->email,
            'komentar'=>$request->komen,
-           'jumlah_donasi'=>$request->jumlah_donasi,
            'buktitf'=>$request->bukti_tf,
            'id_buat_donasi' => $id
        ]);
@@ -53,7 +52,8 @@ class DonaturController extends Controller
     public function confimasi($id)
     {
      DB::table('donatur')->where('id',$id)->update([
-            'konfirmasi' => true
+            'konfirmasi' => true,
+            
        ]);
        $user = DB::table('donatur')->where('id',$id)->first();
        $buat_donasi = DB::table('donatur')->where('id_buat_donasi',$user->id_buat_donasi)->sum('jumlah_donasi');

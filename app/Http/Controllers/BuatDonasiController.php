@@ -11,10 +11,7 @@ class BuatDonasiController extends Controller
 {
     public function buat_donasi(Request $request)
     {
-        $request->validate([
-            'norek' => 'required|max:255',
-            'jumlah'=>'required|max:255',
-        ]);
+      
         $auth = Auth::id();
         $gambar = $request->file('gambar')->getClientOriginalName();
 
@@ -26,7 +23,7 @@ class BuatDonasiController extends Controller
            'norek'=>$request->norek,
            'users_id' => $auth
         ]);
-        Alert::success('ANAK KONTOL', 'Judul Pesan');
+        Alert::success('ANAK PEPEQ', 'Judul Pesan');
         $name = time() . $gambar;
         $request->gambar->move( public_path('img/donasi/'), $gambar);;
         return redirect()->back();
