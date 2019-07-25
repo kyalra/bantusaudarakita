@@ -14,9 +14,7 @@
                     <th>
                         ID
                     </th>
-                    <th>
-                        Judul
-                    </th>
+                    
                     <th>
                         Nama
                     </th>
@@ -45,9 +43,7 @@
                         <td>
                             {{$no}}
                         </td>
-                        <td>
-                        {{$get->judul}}
-                        </td>
+                        
                         <td>
                             {{$get->nama}}
                         </td>
@@ -65,7 +61,7 @@
                         </td>
                         <td>
                           @if($get->konfirmasi == 0)
-                            <a class="btn" href="/donasi/cofirmasi/{{$get->id}}">KOnfirmasi</a>
+                            <a class="btn" href="/donasi/cofirmasi/{{$get->id}}">Konfirmasi</a>
                             @else
                         </td>
                     </tr>

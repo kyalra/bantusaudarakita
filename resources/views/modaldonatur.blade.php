@@ -32,7 +32,7 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Silakan Donasi Ke Rekening di bawah ini</label>
-                <label >0123453212 -BCA- a/n Rizky Aldi Saputra</label> 
+                <label >0123453212 -BCA- a/n Admin</label> 
                
               </div>
               

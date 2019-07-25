@@ -38,12 +38,12 @@ class DonasiApiController extends Controller
     {
         
         $donasi=new Donatur();
-        $donasi->id_buat_donasi = $request->id;
+        $donasi->id_buat_donasi = $request->id_buat_donasi;
         $donasi->nama = $request->nama;
         $donasi->email = $request->email;
         $donasi->komentar = $request->komen;
         $donasi->jumlah_donasi = $request->jumlah_donasi;
-        $donasi->buktitf = $request->gambar;
+        $donasi->buktitf = $request->buktitf;
         $donasi->konfirmasi = 0;
         
 

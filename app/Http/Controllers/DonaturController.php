@@ -44,8 +44,8 @@ class DonaturController extends Controller
     public function getdonatur()
     {
 
-        $donatur = DB::table('donatur')
-        ->join('buat_donasi','donatur.id_buat_donasi','=','donatur.id')->get();
+        $donatur = DB::table('donatur')->get();
+        // ->join('buat_donasi','donatur.id_buat_donasi','=','donatur.id')
         // dd($donatur);
    
        
