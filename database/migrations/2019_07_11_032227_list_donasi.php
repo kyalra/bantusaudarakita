@@ -17,7 +17,7 @@ class ListDonasi extends Migration
             $table->increments('id');
             $table->integer('id_buat_donasi');
             $table->integer('id_donatur');
-            $table->integer('donasi_terkumpul');
+            $table->integer('donasi_terkumpul')->nullable();
             
         });
     }

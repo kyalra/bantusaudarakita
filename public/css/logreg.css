@@ -13,7 +13,7 @@
 }
 
 body {
-  background: #21242a;
+  background: url(img/bglogin.jpg) !important;
   font-size: 14px;
 }
 

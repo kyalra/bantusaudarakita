@@ -18,7 +18,7 @@ class ListDonasiController extends Controller
     {
         $del=DB::table('buat_donasi')->where('id',$id);
         $del->delete();
-        Alert::success('ANAK KONTOL', 'Judul Pesan');
+        Alert::success('Donasi Sudah dihapus', 'BERHASIL');
         return redirect()->back();
     }
     

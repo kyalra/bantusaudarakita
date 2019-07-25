@@ -46,6 +46,7 @@
                             {{$no}}
                         </td>
                         <td>
+                        {{$get->judul}}
                         </td>
                         <td>
                             {{$get->nama}}

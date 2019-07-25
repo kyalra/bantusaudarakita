@@ -21,9 +21,10 @@ class BuatDonasiController extends Controller
            'jumlah'=>$request->jumlah_donasi,
            'gambar'=>$gambar,
            'norek'=>$request->norek,
+           'jumlah_terkumpul'=>$request->jumlah_terkumpul,
            'users_id' => $auth
         ]);
-        Alert::success('ANAK PEPEQ', 'Judul Pesan');
+        Alert::success('Yeay Donasi Kamu Berhasil dI Upload', 'BERHASIL MEMBUAT DONASI');
         $name = time() . $gambar;
         $request->gambar->move( public_path('img/donasi/'), $gambar);;
         return redirect()->back();

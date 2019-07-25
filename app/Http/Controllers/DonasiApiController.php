@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Donatur;
 use Illuminate\Http\Request;
 use DB;
 
@@ -36,7 +36,22 @@ class DonasiApiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $donasi=new Donatur();
+        $donasi->id_buat_donasi = $request->id;
+        $donasi->nama = $request->nama;
+        $donasi->email = $request->email;
+        $donasi->komentar = $request->komen;
+        $donasi->jumlah_donasi = $request->jumlah_donasi;
+        $donasi->buktitf = $request->gambar;
+        $donasi->konfirmasi = 0;
+        
+
+        $donasi->save();
+    }
+    public function upload(Request $request){
+        $gambar = $request->file('gambar')->getClientOriginalName();
+        $request->gambar->move( public_path('/img/donasi/'), $gambar);;
     }
 
     /**

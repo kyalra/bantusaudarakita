@@ -15,6 +15,7 @@
                         <label for="exampleInputEmail1">Judul</label>
                         <input type="text" class="form-control" name="judul" id="exampleInputEmail1"
                             placeholder="Masukan Nama">
+                            <input type="hidden" name="jumlah_terkumpul" value="0">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Keterangan</label>

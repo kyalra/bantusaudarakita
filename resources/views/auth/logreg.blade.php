@@ -8,11 +8,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <style>
 
     body {
         padding-top: 17%;
-        background:url(img/bg.jpg);
+        background:url("img/19366.jpg");
         background-size:cover;
         
     }
@@ -126,13 +127,44 @@
         background-color: #1CA347;
         border-color: #1CA347;
     }
-
+    .jancuk{
+        position : absolute;
+        
+        left: 33%;
+        top: 10%;
+    }
+    
+    .preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+            background-color : #fff;
+            
+		}
+		.preloader .loading {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			font: 14px arial;
+		}
+    
 </style>
 </head>
 <body>
+<div class="preloader">
+			<div class="loading">
+				<img src="{{asset('img/3.gif')}}" width="80">
+				<p>Harap Tunggu</p>
+			</div>
+		</div>
 
-<div class="container">
-    <div class="row">
+<h1 class="animated infinite pulse delay-2s jancuk">AYO BANTU SAUDARA KITA</h1>
+<div class="container animated infinite pluse">
+    <div class="row ">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-login">
                 <div class="panel-heading">
@@ -141,7 +173,7 @@
                             <a href="#" class="active" id="login-form-link">Login</a>
                         </div>
                         <div class="col-xs-6">
-                            <a href="#" id="register-form-link">Register</a>
+                            <a href="#" id="register-form-link" >Register</a>
                         </div>
                     </div>
                     <hr>
@@ -230,7 +262,18 @@
         });
 
     });
-  
+    
+     
+     $(document).ready(function(){
+    $(".preloader").hide();
+    loader.prependTo(window);
+});
+
+$(window).load(function(){
+    loader.remove();
+	$(".preloader").show();
+});
+   
 </script>
 </body>
 </html>

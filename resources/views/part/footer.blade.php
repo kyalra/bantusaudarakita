@@ -1,4 +1,4 @@
-<footer class="footer">
+<!-- <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
@@ -18,7 +18,7 @@
           </div>
           <!-- your footer here -->
         </div>
-      </footer>
+      </footer> -->
     </div>
   </div>
   <div class="fixed-plugin">
@@ -41,27 +41,7 @@
             <div class="clearfix"></div>
           </a>
         </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('assets/img/sidebar-1.jpg')}}" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('assets/img/sidebar-2.jpg')}}" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('assets/img/sidebar-3.jpg')}}" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{asset('assets/img/sidebar-4.jpg')}}" alt="">
-          </a>
-        </li>
+        
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @include('sweet::alert')
 </body>

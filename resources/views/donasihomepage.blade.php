@@ -15,7 +15,7 @@
                         price You may see some
                         for as low as each.</p>
                     <a class="main_btn mr-10" href="#our-major-cause">donate now</a>
-                    <a class="white_bg_btn" href="#">view activity</a>
+                    <!-- <a class="white_bg_btn" href="#">view activity</a> -->
                 </div>
             </div>
         </div>
