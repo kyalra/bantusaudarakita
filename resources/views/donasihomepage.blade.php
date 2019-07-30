@@ -14,8 +14,8 @@
                     <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in
                         price You may see some
                         for as low as each.</p>
-                    <a class="main_btn mr-10" href="#our-major-cause">donate now</a>
-                    <!-- <a class="white_bg_btn" href="#">view activity</a> -->
+                    <a class="main_btn mr-10" href="#our-major-cause">Donasi Sekarang</a>
+                    <a class="white_bg_btn" href="https://drive.google.com/open?id=1po-W_NGDqTW1Po4CtvojCLQu-FdWqd0-">Download Aplikasi Disini</a>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
                         <p class="card-text">{{$get->keterangan}}
                         </p>
                         <button value="{{$get->id}}" type="button" class="main_btn2 mr-10 buat_donasi">donate
-                            here</button>
+                            disini</button>
                     </div>
                 </div>
                 @endforeach
@@ -111,7 +111,7 @@
 
 <!--================ Start Experience Area =================-->
 <section class="experience_donation section_gap">
-    <div class="container">
+    <div id ="buatdonasi"class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
                 <h1>Ayo Bantu Saudara KITA!</h1>

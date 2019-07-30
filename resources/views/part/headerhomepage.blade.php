@@ -22,27 +22,25 @@
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/">home</a>
                                 </li>
-                                <!-- <li class="nav-item ">
-										<a class="nav-link" href="causes.html">causes</a>
+                                <li class="nav-item ">
+										<a class="nav-link" href="https://drive.google.com/open?id=11iGfl9kM3anE0Py9nVEB6LrRVSZExUPm">Dokumentasi</a>
 									</li>
-									<li class="nav-item ">
+									<!-- <li class="nav-item ">
 										<a class="nav-link" href="events.html">events</a>
-									</li>
+									</li> -->
 									<li class="nav-item submenu dropdown">
-										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event</a>
 										<ul class="dropdown-menu">
 											<li class="nav-item">
-												<a class="nav-link" href="about.html">About</a>
+												<a class="nav-link" href="#buatdonasi">Buat Donasi</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link" href="donation.html">donation</a>
+												<a class="nav-link" href="#our-major-cause">Donasi Sekarang</a>
 											</li>
-											<li class="nav-item">
-												<a class="nav-link" href="elements.html">Elements</a>
-											</li>
+										
 										</ul>
 									</li>
-									<li class="nav-item submenu dropdown">
+									<!-- <li class="nav-item submenu dropdown">
 										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
 										<ul class="dropdown-menu">
 											<li class="nav-item">
