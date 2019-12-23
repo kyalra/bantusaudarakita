@@ -19,7 +19,7 @@ class Donatur extends Migration
             $table->string('nama',100);
             $table->string('email', 100);
             $table->string('komentar');
-            $table->integer('jumlah_donasi')->nullable();
+            $table->string('jumlah_donasi')->nullable();
             $table->string('buktitf');
             $table->boolean('konfirmasi')->default(false);
             $table->timestamp('created_at')->nullable();

@@ -1,0 +1,13 @@
+{
+    "name": "ConfirmTransfer",
+    "alias": "confirmtransfer",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\ConfirmTransfer\\Providers\\ConfirmTransferServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

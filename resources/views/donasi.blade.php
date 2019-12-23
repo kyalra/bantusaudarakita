@@ -61,7 +61,7 @@
                         </td>
                         <td>
                           @if($get->konfirmasi == 0)
-                            <a class="btn" href="/donasi/cofirmasi/{{$get->id}}">Konfirmasi</a>
+                            <a class="btn" href="{{ url('confirmtransfer/{$id}') }}">Konfirmasi</a>
                             @else
                         </td>
                     </tr>

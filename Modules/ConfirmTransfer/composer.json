@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/confirmtransfer",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\ConfirmTransfer\\Providers\\ConfirmTransferServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ConfirmTransfer\\": ""
+        }
+    }
+}

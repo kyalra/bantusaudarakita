@@ -1,0 +1,13 @@
+{
+    "name": "DaftarDonasi",
+    "alias": "daftardonasi",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\DaftarDonasi\\Providers\\DaftarDonasiServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

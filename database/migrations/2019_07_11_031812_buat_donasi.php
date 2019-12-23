@@ -19,9 +19,9 @@ class BuatDonasi extends Migration
             $table->string('judul');
             $table->string('keterangan');
             $table->string('gambar');
-            $table->integer('jumlah');
-            $table->integer('norek');
-            $table->integer('jumlah_terkumpul')->nullable();
+            $table->string('jumlah');
+            $table->string('norek');
+            $table->string('jumlah_terkumpul')->nullable();
         });
     }
 
